@@ -1,0 +1,75 @@
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+/* Home section */
+.bg-image {
+  background: url('./images/bg-image2.png') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh; 
+  overflow: auto; 
+}
+
+.bg-image::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0),  
+    rgba(242, 249, 47, 0.5)  
+  );
+  z-index: 1;
+}
+
+.bg-image > * {
+  position: relative;
+  z-index: 2;
+}
+
+.element {
+  border: 2px solid #000; 
+}
+
+.jumbotron-wrapper {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(87, 87, 13, 0.7)), url('./images/intro-img.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 2rem;
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+.jumbotron-wrapper > * {
+  position: relative;
+  z-index: 2;
+}
